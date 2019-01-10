@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="http://localhost/projet_musees/">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>{% block title 'ACS - MVC' %}</title>
+    </head>
+    <body class="ff1">
+
+     {% include 'Layout/nav.html.twig' %}
+
+        {% block content %}
+        
+        {% endblock %}
+
+
+        {% include 'Layout/footer.html.twig' %}
+    </body>
+</html>

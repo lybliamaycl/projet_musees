@@ -1,0 +1,51 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Home
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="w100 grow-2 d-flex flex-row position-r">
+        
+        <div class="w75 grow-2 bg1 d-flex justify-start align-center p20">
+
+            <div class="w50 m20 intro">
+                <h3 class="ff2 c3 fs30 mb20">Lorem ipsum dolor</h3>
+                <p class="c3 fs20">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro similique pariatur unde sapiente repellat, rerum aspernatur labore repudiandae itaque, et voluptatem cum atque voluptatibus! Harum, blanditiis accusamus. Omnis, quasi minus.</p>
+            </div>
+
+        </div>
+
+        <div class="w25 h100"></div>
+
+        <div class="container-svg position-a w50">
+            <object id="carte" type="image/svg+xml" data="./assets/img/carte.svg" width="100%"></object>
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="w100 h250p d-flex justify-center align-center">
+        allo
+    </div>
+
+    <section class="w100 h100 bc4 d-flex flex-row justify-spacee align-center"><!-- AFFICHAGE RESULTAT DES MUSEES PAR DEPARTEMENT -->
+        
+        <article class="musee">
+            <img src="./assets/img/mainpage.jpg" width="100%">
+        </article>
+
+        <article class="musee">
+            <img src="./assets/img/mainpage.jpg" width="100%">
+        </article>
+
+        <article class="musee">
+            <img src="./assets/img/mainpage.jpg" width="100%">
+        </article>
+
+
+    </section>
+{% endblock %}

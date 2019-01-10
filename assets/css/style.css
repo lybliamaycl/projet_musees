@@ -1,0 +1,153 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Roboto');
+
+body{
+    height: 100vh;
+}
+
+.position-a { position: absolute; } 
+.position-f { position: fixed; }
+.position-r { position: relative; }
+
+.d-flex { display: flex ; }
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+
+.flex-wrap { flex-wrap: wrap ; }
+
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-spacea { justify-content: space-around; }
+.justify-spaceb { justify-content: space-between; }
+.justify-spacee { justify-content: space-evenly; }
+
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+
+.grow-1 { flex-grow: 1; }
+.grow-2 { flex-grow: 2; }
+
+/* HEIGHT & WIDTH */
+
+.h50 { height: 50%; }
+.h75 { height: 75%; }
+.h100 { height: 100%; }
+
+.h100p { height: 100px; }
+.h250p { height: 250px; }
+
+.w25 { width: 25%; }
+.w40 { width: 40%; }
+.w50 { width: 50%; }
+.w60 { width: 60%; }
+.w75 { width: 75%; }
+.w100 { width: 100%; }
+
+.vh100 { height: 100vh; }
+
+/* PADDING */
+
+.p10 { padding: 10px; }
+.p20{ padding: 20px; }
+
+.pt10 { padding-top: 10px; }
+.pt20 { padding-top: 20px; }
+
+.pr10 { padding-right: 10px; }
+.pr20 { padding-right: 20px; }
+
+.pb10 { padding-bottom: 10px; }
+.pb20 { padding-bottom: 20px; }
+
+.pl10 { padding-left: 10px; }
+.pl20 { padding-left: 20px; }
+
+/* MARGIN */
+
+.m10 { margin: 10px; }
+.m20{ margin: 20px; }
+
+.mt10 { margin-top: 10px; }
+.mt20 { margin-top: 20px; }
+
+.mr10 { margin-right: 10px; }
+.mr20 { margin-right: 20px; }
+
+.mb10 { margin-bottom: 10px; }
+.mb20 { margin-bottom: 20px; }
+
+.ml10 { margin-left: 10px; }
+.ml20 { margin-left: 20px; }
+
+/* COULEURS */
+
+.c1 { color: #5b4ff4; }
+.c2 { color: #000000; }
+.c3 { color: #ffffff; }
+.c4 { color: #f2eff5; }
+
+.bc1 { background-color: #5b4ff4; }
+.bc2 { background-color: #000000; }
+.bc3 { background-color: #ffffff; }
+.bc4 { background-color: #f2eff5; }
+
+.bg1 { 
+    background: url('./../img/mainpage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* TEXTE */
+
+.ff1 { font-family: 'Roboto', serif; }
+.ff2 { font-family: 'Cinzel', serif; }
+
+.fs8 { font-size: 0.8rem; }
+.fs10 { font-size: 1rem; }
+.fs12 { font-size: 1.2rem; }
+.fs14 { font-size: 1.4rem; }
+.fs16 { font-size: 1.6rem; }
+.fs18 { font-size: 1.8rem; }
+.fs20 { font-size: 2rem; }
+.fs22 { font-size: 2.2rem; }
+.fs24 { font-size: 2.4rem; }
+.fs30 { font-size: 3rem; }
+.fs60 { font-size: 6rem; }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align : right; }
+.text-justify { text-align: justify; }
+
+.text-lowercase { text-transform: lowercase; }
+.text-uppercase { text-transform: uppercase; }
+
+.text-nodeco { text-decoration: none; }
+
+.border-none { border: none; }
+
+.cursor-pointer { cursor: pointer; }
+
+.shadow{ box-shadow: 0 0 2em grey; }
+
+/******************************/
+
+.intro{
+    background-color: rgba(0,0, 0, 0.5);
+    line-height: 3rem;
+    padding: 2rem;
+}
+
+.container-svg{
+    background-color: rgba(200, 200, 200, 0.8);
+    top: 10%;
+    right:5vw;
+    padding: 3rem;
+}
+
+.musee {
+    height: 220px;
+    width: 300px;
+}
