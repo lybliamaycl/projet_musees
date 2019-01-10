@@ -20,14 +20,21 @@ class Router {
             //    $result['action']           = 'login';
             //}
 
-            if($parts[0] === "departement" && count($parts) == 2){ 
+            if($parts[0] === "departement" && count($parts) == 2){
                 $result['controller'] = 'Departement';
+                $result['action'] = 'display';
+                $result["params"]['id'] = $parts[1];
+            }
+            if($parts[0] === "musee" && count($parts) == 2){
+                $result['controller'] = 'Musee';
                 $result['action'] = 'display';
                 $result["params"]['id'] = $parts[1];  
             }
-        }
+          }
+
+
 
         return $result;
     }
-    
+
 }

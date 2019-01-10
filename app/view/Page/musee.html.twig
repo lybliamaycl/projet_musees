@@ -1,0 +1,26 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Musees
+{% endblock %}
+
+{% block content %}
+<div>
+<ul>
+{% for musee in musees %}
+{% for  fotomusee in fotomusees %}
+<li>{{ fotomusee }}</li>
+  {% endfor %}
+<li>{{ musee.MUS_NOM }}</li>
+<li>{{ musee.MUS_VILLE}}</li>
+<li>{{ musee.MUS_CP}}</li>
+<li>{{ musee.MUS_TEL}}</li>
+<li>{{ musee.MUS_FAX}}</li>
+<li>{{ musee.MUS_SITE}}</li>
+<li>{{ musee.MUS_FERME}}</li>
+<li>{{ musee.MUS_OUVERT}}</li>
+<li>{{ musee.MUS_NOCTURNE}}</li>
+{% endfor %}
+</ul>
+</div>
+{% endblock %}
