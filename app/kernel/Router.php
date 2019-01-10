@@ -19,6 +19,12 @@ class Router {
             //    $result['controller']       = 'User';
             //    $result['action']           = 'login';
             //}
+
+            if($parts[0] === "departement" && count($parts) == 2){ 
+                $result['controller'] = 'Departement';
+                $result['action'] = 'display';
+                $result["params"]['id'] = $parts[1];  
+            }
         }
 
         return $result;
