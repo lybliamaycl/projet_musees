@@ -8,7 +8,7 @@ class Musee extends Model{
         $sql = $db->prepare("SELECT * FROM musees WHERE id_musee = :idMusee");
         $sql->bindValue (':idMusee', $idmusee, PDO::PARAM_INT);
         $sql->execute();
-        $museedata = $sql->fetchAll();
+        $museedata = $sql->fetch();
 
         return $museedata;
 

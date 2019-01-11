@@ -7,8 +7,8 @@ mb_internal_encoding('UTF-8');
 date_default_timezone_set("Europe/Paris");
 header('Content-type: text/html; charset=utf-8');
 
-define('DB_DSN', 'mysql:dbname=musee_db;host=localhost');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
+define('DB_DSN', 'mysql:dbname=projet_musees;host=localhost:3306');
+define('DB_USER', 'clementinel');
+define('DB_PASSWORD', 'online@2017');
 
 require_once 'functions.common.php';
