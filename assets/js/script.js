@@ -8,6 +8,10 @@ $(document).ready( function(){
 
         allDepsArray.forEach(dep => {
             dep.addEventListener('click', function(){
+                $('html, body').animate({
+                    scrollTop: $('#resultat').offset().top
+                }, 1500);
+
                 var idDep = dep.getAttribute('data-id');
                 console.log(idDep);
 
