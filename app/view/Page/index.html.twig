@@ -28,12 +28,22 @@
 
 </div>
 
-    <div class="w100 h250p d-flex justify-center align-center">
-        allo
+    <div class="w100 h250p d-flex flex-column justify-center align-center">
+        <p class="ff2 fs30">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p class="fs20">Ut, voluptates nesciunt. Dicta aliquam iusto soluta eius nihil.</p>
     </div>
 
-    <section class="w100 bc4 d-flex flex-row justify-center align-center flex-wrap" id="resultat"><!-- AFFICHAGE RESULTAT DES MUSEES PAR DEPARTEMENT -->
+    <section class="w100 d-flex flex-column align-center justify-center">
+
+        <div class="w75 d-flex flex-row justify-start flex-wrap">
+            {% for theme in themes %}
+                <div class="p10 ml10 mr10 mb10 bc1"><a href="./theme/{{ theme.ID_THEME }}" data-id="{{ theme.ID_THEME }}" class="text-nodeco c3">{{ theme.TH_LIBELLE }}</a></div>
+            {% endfor %}
+        </div>
+
+        <div id="resultat" class="w75 d-flex flex-row flex-wrap justify-center"><!-- AFFICHAGE RESULTAT DES MUSEES PAR DEPARTEMENT -->
         <!-- VOIR AJAX DANS ASSETS/JS/SCRIPT.JS -->
+        </div>
     </section>
 
 {% endblock %}

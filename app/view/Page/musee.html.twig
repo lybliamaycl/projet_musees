@@ -15,21 +15,39 @@
       </ul>
     </div>
 
-      
+      <div class="info position-a w50 p20"><!-- INFOS MUSEE -->
 
-      <div class="info position-a w50"><!-- POSITION ABSOLUTE -->
-          <ul> 
-            <li>{{ musee.MUS_NOM }}</li>
-            <li>{{ musee.MUS_VILLE}}</li>
-            <li>{{ musee.MUS_CP}}</li>
-            <li>{{ musee.MUS_TEL}}</li>
-            <li>{{ musee.MUS_FAX}}</li>
-            <li>{{ musee.MUS_SITE}}</li>
-            <li>{{ musee.MUS_FERME}}</li>
-            <li>{{ musee.MUS_OUVERT}}</li>
-            <li>{{ musee.MUS_NOCTURNE}}</li>
-          </ul>
-       </div> 
+        <div class="w100">
+          <h3 class="ff2 fs40">{{ musee.MUS_NOM }}</h3>
+          <p class="fs12">{{ musee.MUS_ADRESSE }} - {{ musee.MUS_CP}} {{ musee.MUS_VILLE}}
+          </p>
+        </div>
+
+        <div class="w100 d-flex flex-row">
+
+            <div class="w50 pt20 fs16">
+              <p class="mt10"><span class="fs18">Fermeture annuelle :</span><br>
+                {{ musee.MUS_FERME}}
+              </p>
+
+              <p class="mt10"><span class="fs18">Période d'ouverture :</span> </br>
+                {{ musee.MUS_OUVERT}}
+              </p>
+
+              <p class="mt10"><span class="fs18">Ouverture nocturne :</span> </br>
+                {{ musee.MUS_NOCTURNE}}
+              </p>
+            </div>
+
+            <div class="w50 pl20 pt20 fs16">
+                <p class="p10 mt10 bc2"><a href="tel:{{ musee.MUS_TEL }}" class="c3 text-nodeco text-uppercase"><i class="fas fa-phone"></i> {{ musee.MUS_TEL }}</a></p>
+                <p class="p10 mt10 bc2 c3 text-nodeco text-uppercase"><i class="fas fa-fax"></i> {{ musee.MUS_FAX }}</p>
+                <p class="p10 mt10 bc2 c3 text-nodeco text-uppercase">{{ musee.MUS_SITE }}</p>
+            </div>
+
+        </div>
+        
+      </div> 
 
   </div>
 

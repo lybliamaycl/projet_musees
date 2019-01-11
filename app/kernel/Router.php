@@ -30,6 +30,12 @@ class Router {
                 $result['action'] = 'display';
                 $result["params"]['id'] = $parts[1];  
             }
+            if($parts[0] === "theme" && count($parts) == 3){
+                $result['controller'] = 'Theme';
+                $result['action'] = 'displayTheme';
+                $result["params"]['dep'] = $parts[1]; 
+                $result["params"]['id'] = $parts[2];  
+            }
           }
 
 

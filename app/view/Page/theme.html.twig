@@ -1,0 +1,19 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Les Musées par thèmes
+{% endblock %}
+
+{% block content %}
+
+    <div class="w100 grow-2 d-flex flex-row position-r">
+        <ul>
+        {% for musee in musees %}
+        <li>{{ musee.MUS_NOM }}</li>
+        <li>{{ musee.MUS_VILLE }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+</div>
+{% endblock %}

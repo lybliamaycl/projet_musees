@@ -20,12 +20,17 @@ $(document).ready( function(){
                         var json = result;
                         console.log(json);
                         arr = JSON.parse(json);
-                        console.log(arr);
+                        console.log(arr); 
 
                         var museeList = "";
+
                         for(i = 0; i < arr.length; i++){
                             var musee = (arr[i]);
-                            museeList += '<article class="musee p20 h250p"><img src="./assets/img/mainpage.jpg" width="100%"><a class="c1" href="' + location + 'musee/' + arr[i].ID_MUSEE + '">'  + musee.MUS_NOM + "</a>" + "</br>" + musee.MUS_VILLE + "</article>";
+                            museeList += '<article class="musee p20 d-flex flex-column align-center">';
+                            museeList += '<img src="./assets/img/mainpage.jpg" width="100%">';
+                            museeList +='<p class="pt10 text-center"><a class="c2 ff2 fs16" href="' + location + 'musee/' + musee.ID_MUSEE + '">'  + musee.MUS_NOM + "</a></p>";
+                            museeList += '<p class="fs12 mt10">' + musee.MUS_VILLE + "</p>"
+                            museeList += "</article>";
                         }
                         // Affichage dans #resultat
                         $('#resultat').html(museeList);
@@ -42,10 +47,10 @@ $(document).ready( function(){
      jQuery(function($) { 
 
         // settings
-        var $slider = $('.slider'); // class or id of carousel slider
-        var $slide = 'li'; // could also use 'img' if you're not using a ul
-        var $transition_time = 2000; // 1 second
-        var $time_between_slides = 4000; // 4 seconds
+        var $slider = $('.slider'); 
+        var $slide = 'li'; 
+        var $transition_time = 2000;
+        var $time_between_slides = 4000;
       
         function slides(){
           return $slider.find($slide);

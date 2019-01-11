@@ -114,6 +114,7 @@ body{
 .fs22 { font-size: 2.2rem; }
 .fs24 { font-size: 2.4rem; }
 .fs30 { font-size: 3rem; }
+.fs40 { font-size: 4rem; }
 .fs60 { font-size: 6rem; }
 
 .text-left { text-align: left; }
@@ -148,16 +149,16 @@ body{
 }
 
 .musee {
-    height: 220px;
+    height: 250px;
     width: 300px;
 }
 
 .info{
     background-color: rgba(200, 200, 200, 0.8);
-    top: 10%;
-    left:5vw;
+    top: 25%;
+    left: 25%;
     padding: 3rem;
-    min-height: 500px;
+    max-height: 400px;
 }
 
 /* JAVASCRIPT PHOTOS MUSEE */
