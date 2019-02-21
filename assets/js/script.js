@@ -15,10 +15,13 @@ $(document).ready( function(){
                 var idDep = dep.getAttribute('data-id');
                 console.log(idDep);
 
+                var nomDep = dep.getAttribute('id');
+                console.log(nomDep);
+
                 $.ajax({
                     url: location + '/departement/' + idDep,
                     type: "GET",
-                    data: JSON.stringify({ id : idDep}),
+                    data: JSON.stringify({ id : idDep, nom : nomDep}),
                     contentType: 'application/json; charset=utf-8',
                     success: function AjaxSucceeded(result){
                         var json = result;
@@ -30,7 +33,7 @@ $(document).ready( function(){
 
                         for(i = 0; i < arr.length; i++){
                             var musee = (arr[i]);
-                            museeList += '<article class="musee p20 d-flex flex-column align-center">';
+                            museeList += '<article class="musee m20 p20 d-flex flex-column align-center">';
                             museeList += '<img src="./assets/img/mainpage.jpg" width="100%">';
                             museeList +='<p class="pt10 text-center"><a class="c2 ff2 fs16" href="' + location + 'musee/' + musee.ID_MUSEE + '">'  + musee.MUS_NOM + "</a></p>";
                             museeList += '<p class="fs12 mt10">' + musee.MUS_VILLE + "</p>"

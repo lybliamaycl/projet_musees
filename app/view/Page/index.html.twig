@@ -1,49 +1,112 @@
-{% extends 'Layout/layout.html.twig' %}
+{% extends 'Layout/layout.html.twig' %} {% block title %} {{ parent() }} -
+Accueil {% endblock %} {% block content %}
 
-{% block title %}
-    {{ parent() }} - Home
-{% endblock %}
+<div class="vh100 d-flex flex-column bg1 position-r">
+  <header class="position-a intro w100 h100 d-flex flex-column align-end justify-end">
 
-{% block content %}
-
-
-    <div class="w100 grow-2 d-flex flex-row position-r">
-        
-        <div class="w75 grow-2 bg1 d-flex justify-start align-center p20">
-
-            <div class="w50 m20 intro">
-                <h3 class="ff2 c3 fs30 mb20">Lorem ipsum dolor</h3>
-                <p class="c3 fs20">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro similique pariatur unde sapiente repellat, rerum aspernatur labore repudiandae itaque, et voluptatem cum atque voluptatibus! Harum, blanditiis accusamus. Omnis, quasi minus.</p>
-            </div>
-
-        </div>
-
-        <div class="w25 h100"></div>
-
-        <div class="container-svg position-a w50">
-            <object id="carte" type="image/svg+xml" data="./assets/img/carte.svg" width="100%"></object>
-        </div>
-
+    <div class="w50 text-center">
+        <object id="logo" type="image/svg+xml" data="./assets/img/logo.svg" width="25%"></object>
     </div>
 
+    <div class="w50 d-flex align-end pt20 pb20">
+      <p class="c2 fs30">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quo
+        harum porro ratione aspernatur reiciendis. Porro culpa ipsam quod vero
+        odio adipisci quidem facilis aspernatur nemo! Rerum consequatur error
+        sint!
+      </p>
+    </div>
+
+    <div class="w50 d-flex flex-column justify-end pt20">
+      <div class="w100 d-flex flex-row align-center">
+        <p
+          class="grow-1"
+          style="height: 1px; border-top:solid 1px #8e5b3d; border-bottom:solid 1px #8e5b3d;"
+        ></p>
+        <h1 class="pl20 pr20 fs40 ff2 c2">Musées BFC</h1>
+        <p
+          class="grow-1"
+          style="height: 1px; border-top:solid 1px #8e5b3d; border-bottom:solid 1px #8e5b3d;"
+        ></p>
+      </div>
+
+      <p class="c2 fs20 text-center">Musées de Bourgogne-Franche-Comté</p>
+    </div>
+
+    <div class="w50 p50 text-center">
+      <i class="fs40 c3 fas fa-arrow-down"></i>
+    </div>
+
+  </header>
 </div>
 
-    <div class="w100 h250p d-flex flex-column justify-center align-center">
-        <p class="ff2 fs30">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <p class="fs20">Ut, voluptates nesciunt. Dicta aliquam iusto soluta eius nihil.</p>
+<div class="w100 d-flex">
+  <div class="w25 d-flex flex-column p20 justify-center bg-c2">
+    <p class="ff2 fs30 pt20 c3">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </p>
+    <p class="fs20 pt20">
+      Ut, voluptates nesciunt. Dicta aliquam iusto soluta eius nihil. Architecto
+      aut officiis ipsa incidunt tempora blanditiis unde dolorum optio, eos
+      reiciendis, excepturi repudiandae nisi sed! Ipsa sapiente neque expedita
+      numquam tenetur.
+    </p>
+    <p class="fs20 pt10">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, assumenda
+      sunt, illum officiis, saepe accusantium aliquid ratione suscipit corporis
+      quibusdam eaque unde nesciunt soluta magni praesentium esse quas enim
+      omnis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+      excepturi perferendis reiciendis numquam a corrupti, maiores expedita,
+      assumenda dicta enim amet quis animi maxime adipisci quae magni nisi
+      dolorem nam.
+    </p>
+  </div>
+
+  <div class="grow-1 p20 d-flex justify-center align-center">
+    <object
+      id="carte"
+      type="image/svg+xml"
+      data="./assets/img/carte.svg"
+      width="90%"
+    ></object>
+  </div>
+</div>
+
+<div class="vh100 w100 illus d-flex flex-column justify-center align-center">
+  <div class="grow-1 w100 d-flex align-center justify-center">
+    <p class="ff2 fs20">
+      Cliquez sur le département de votre choix pour parcourir la liste des
+      musées.
+    </p>
+  </div>
+
+  <div class="h500p w75 bg2"></div>
+
+  <div class="grow-1 w100 d-flex align-center justify-center">
+    <p class="ff2 fs30">Trouvez tous les musées de chaque département !</p>
+  </div>
+</div>
+
+<section class="w100 d-flex flex-column align-center justify-center">
+  {#
+  <div class="w75 d-flex flex-row justify-start flex-wrap">
+    {% for theme in themes %}
+    <div class="p10 ml10 mr10 mb10 bc1">
+      <a
+        href="./theme/{{ theme.ID_THEME }}"
+        data-id="{{ theme.ID_THEME }}"
+        class="text-nodeco c3"
+        >{{ theme.TH_LIBELLE }}</a
+      >
     </div>
+    {% endfor %}
+  </div>
+  #}
 
-    <section class="w100 d-flex flex-column align-center justify-center">
-
-        <div class="w75 d-flex flex-row justify-start flex-wrap">
-            {% for theme in themes %}
-                <div class="p10 ml10 mr10 mb10 bc1"><a href="./theme/{{ theme.ID_THEME }}" data-id="{{ theme.ID_THEME }}" class="text-nodeco c3">{{ theme.TH_LIBELLE }}</a></div>
-            {% endfor %}
-        </div>
-
-        <div id="resultat" class="w75 d-flex flex-row flex-wrap justify-center"><!-- AFFICHAGE RESULTAT DES MUSEES PAR DEPARTEMENT -->
-        <!-- VOIR AJAX DANS ASSETS/JS/SCRIPT.JS -->
-        </div>
-    </section>
+  <div id="resultat" class="w75 d-flex flex-row flex-wrap justify-center">
+    <!-- AFFICHAGE RESULTAT DES MUSEES PAR DEPARTEMENT -->
+    <!-- VOIR AJAX DANS ASSETS/JS/SCRIPT.JS -->
+  </div>
+</section>
 
 {% endblock %}

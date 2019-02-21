@@ -1,10 +1,13 @@
 {% extends 'Layout/layout.html.twig' %}
 
 {% block title %}
-    {{ parent() }} - Musees
+    {{ parent() }} - {{ musee.MUS_NOM }}
 {% endblock %}
 
 {% block content %}
+
+<div class="vh100 d-flex flex-column">
+
   <div class="w100 grow-2 d-flex flex-row position-r">
 
     <div class="w100"> 
@@ -15,7 +18,7 @@
       </ul>
     </div>
 
-      <div class="info position-a w50 p20"><!-- INFOS MUSEE -->
+      <div class="info position-a w50 p20 bg-c2"><!-- INFOS MUSEE -->
 
         <div class="w100">
           <h3 class="ff2 fs40">{{ musee.MUS_NOM }}</h3>
@@ -32,10 +35,6 @@
 
               <p class="mt10"><span class="fs18">Période d'ouverture :</span> </br>
                 {{ musee.MUS_OUVERT}}
-              </p>
-
-              <p class="mt10"><span class="fs18">Ouverture nocturne :</span> </br>
-                {{ musee.MUS_NOCTURNE}}
               </p>
             </div>
 
